@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Assistant", sans-serif;
+    background-color: #0b1e3d;
+    scroll-behavior: smooth;
+    /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: -2;
+    /* background-color: #0b1e3d; */
+    /* Background canvas color */
+    background-image: linear-gradient(30deg, #0b1e3f, #00bfff66);
+
+}
+
+.landing-title {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #FFF;
+    border-bottom: 2px solid #00bfff;
+    box-shadow: 0 2px 20px #00bfff;
+    background-color: #00bfffAA;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #FFF;
+    margin-top: 10px;
+}
+
+.flow-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Make sure it appears below the dot containers */
+}
+
+.dot-container,
+.section-container {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    background-color: #FFF;
+    /* Neon glow for the dots */
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    animation: pulse 2s infinite ease-in-out;
+    box-shadow: 0 0 15px #00ffea, 0 0px 10px #00ffea inset;
+}
+
+.content {
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(-50%) translateX(-5%);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    background-color: #03bfff44;
+    border-radius: 14px;
+    background-image: linear-gradient(45deg, #03bfff44, #03bfff00);
+    box-shadow: 0 0 20px #03bfff33;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px;
+    color: #d1e7ff;
+    position: relative;
+}
+
+.content.mark {
+    background-color: transparent;
+}
+
+.content.mark::before {
+    content: '';
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 4px dashed #00bfff;
+    pointer-events: none;
+}
+.content p {
+    text-align: right;
+    padding: 10px 0px;
+}
+
+.content p i {
+    margin-left: 10px;
+}
+
+h2 {
+    color: #ffffff;
+    /* White text for better contrast */
+    font-size: 24px;
+}
+
+p {
+    /* Light blue text for soft contrast */
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Animation for Pulsing Dots */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Scroll Animation */
+.dot-container.active .content,
+.section-container.active .content {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+input[type="text"] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color:#00ffea;
+    border: 2px solid #00ffea;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #00ffea;
+}
+
+button.submit-button {
+    background-color: #FFF;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background-color: #00ffea;
+    border: none;
+    font-weight: bold;
+}
