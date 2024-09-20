@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Assistant", sans-serif;
+}
+
+body {
+    background-color: #0b1e3d;
+    scroll-behavior: smooth;
+    /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
+    background-image: linear-gradient(45deg, #00bfff, #0061ff8f), url(/stairs.jpeg);
+    background-size: cover;
+    background-position: top;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    height: 80px;
+    background-image: url(/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFF;
+}
+
+.header svg {
+    fill: #FFF;
+    width: 100%;
+    height: 50px;
+}
+
+.container {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color:#FFF;
+    border: 2px solid #FFF;
+    outline: none;
+    box-shadow: 0 0 10px #FFF8, 0 0 10px #FFF8 inset;
+}
+
+input[type="text"]::placeholder {
+    color: #FFFB;
+}
+
+button.submit-button {
+    background-color: #FFF;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    margin: 8px 0;
+    border-radius: 10px;
+    background-color: #00ffea;
+    border: none;
+    font-weight: bold;
+}

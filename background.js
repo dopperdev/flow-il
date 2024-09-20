@@ -85,5 +85,7 @@ window.addEventListener('resize', () => {
 });
 
 // Initialize and animate
-init();
-animate();
+if (!window.matchMedia('(max-width: 767px)').matches) {
+    init();
+    animate();
+}

@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Assistant", sans-serif;
 }
 
 body {
-    font-family: "Assistant", sans-serif;
     background-color: #0b1e3d;
     scroll-behavior: smooth;
     /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
@@ -61,8 +61,11 @@ canvas {
 .dot-container,
 .section-container {
     position: relative;
-    margin-top: 150px;
+    margin-top: 50px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -79,19 +82,18 @@ img {
     /* Neon glow for the dots */
     border-radius: 50%;
     position: absolute;
-    right: -50px;
+    right: -35px;
     animation: pulse 2s infinite ease-in-out;
     box-shadow: 0 0 15px #00ffea, 0 0px 10px #00ffea inset;
 }
 
 .content {
-    margin-top: 40px;
     opacity: 0;
-    transform: translateY(-50%) translateX(-5%);
+    transform: translateX(-5%);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-    background-color: #03bfff44;
+    background-color: #03bfff22;
     border-radius: 14px;
-    background-image: linear-gradient(45deg, #03bfff44, #03bfff00);
+    background-image: linear-gradient(45deg, #00ffea33, #03bfff00);
     box-shadow: 0 0 20px #03bfff33;
     font-size: 20px;
     font-weight: 600;
@@ -153,7 +155,7 @@ p {
 .dot-container.active .content,
 .section-container.active .content {
     opacity: 1;
-    transform: translateY(-50%) translateX(0);
+    transform: translateX(0);
 }
 
 input[type="text"] {
@@ -183,4 +185,8 @@ button.submit-button {
     background-color: #00ffea;
     border: none;
     font-weight: bold;
+}
+
+@media (max-width: 767px) {
+
 }
