@@ -7,7 +7,7 @@ function renderDotsView() {
     const containers = document.querySelectorAll('.dot-container, .section-container');
     containers.forEach(dotContainer => {
         const rect = dotContainer.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        if (rect.top >= -rect.height && rect.bottom <= window.innerHeight) {
             dotContainer.classList.add('active');
         } else {
             dotContainer.classList.remove('active');
