@@ -11,9 +11,14 @@ body {
     background-color: #0b1e3d;
     scroll-behavior: smooth;
     /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
-    background-image: linear-gradient(45deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
-    background-size: cover;
+    background-image: linear-gradient(45deg, #0061ff, #00bfffAA), url(../stairs.jpeg);
+    background-size: 100vh 100vh;
     background-position: top;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    align-items: center;
 }
 
 .header {
@@ -31,7 +36,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #FFF;
+    margin-top: 10px;
 }
 
 .header svg {
@@ -46,7 +51,7 @@ body {
 }
 
 .container .content {
-    height: 100vh;
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -62,7 +67,7 @@ input[type="text"] {
     border-radius: 10px;
     border: none;
     background-color: transparent;
-    color:#FFF;
+    color: #FFF;
     border: 2px solid #FFF;
     outline: none;
     box-shadow: 0 0 10px #FFF8, 0 0 10px #FFF8 inset;
