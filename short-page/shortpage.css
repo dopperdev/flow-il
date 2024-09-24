@@ -65,17 +65,14 @@ body {
     text-align: center;
     padding: 30px;
     background-color: #FFF;
-    background-image: linear-gradient(0deg, #8fcdff, #d0e8f2);
+    background-image: linear-gradient(0deg, #6cd1ff, #d5ecff);
     color: #148ae8;
 }
 
 .middle-content {
     color: #FFF;
     text-align: center;
-    background: linear-gradient(0deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center, 50% 0;
+    background: linear-gradient(0deg, #00bfff, #0061ffAA);
     flex-direction: row;
     border-radius: 50px;
     width: 100%;
@@ -86,15 +83,18 @@ body {
 }
 
 .imagine-content {
-    background-image: linear-gradient(180deg, #00bfff, #0061ffAA);
+    background: linear-gradient(0deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
+    background-position: center center, 50% 0;
+    background-repeat: no-repeat;
     font-size: 20px;
     font-weight: 600;
     padding: 30px;
+    padding-top: 60px;
     color: #d1e7ff;
-    position: relative;
     margin: 0 auto;
-    border-bottom: 2px solid #4b72d4;
-    box-shadow: 0 15px 15px -10px #3a47b7;
+    margin-top: -50px;
+    border-bottom: 2px solid #adc4ff;
+    box-shadow: 0 15px 15px -10px #2e8bff;
 }
 
 .imagine-content p {
@@ -102,6 +102,8 @@ body {
     padding: 10px 0px;
     max-width: 500px;
     margin: 0 auto;
+    animation: ctaButton 1s infinite alternate-reverse;
+    -webkit-animation: ctaButton 1s infinite alternate-reverse;
 }
 
 .imagine-content p i {
@@ -109,7 +111,7 @@ body {
 }
 
 .imagine-content p:nth-child(2n) {
-    color: #053f6d;
+    color: #0d3453;
 }
 
 .register-form {
@@ -226,6 +228,10 @@ button.cta {
 }
 
 @media (max-width: 767px) {
+    .content {
+        padding: 10px;
+    }
+
     .register-form,
     .middle-content {
         padding: 20px;
@@ -256,6 +262,7 @@ button.cta {
     from {
         scale: 1.05;
     }
+
     to {
         scale: 1;
     }

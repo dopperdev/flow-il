@@ -10,4 +10,12 @@ window.addEventListener('load', () => {
             })
         });
     });
+
+    const imagineContent = document.querySelector('.imagine-content');
+    const imagineParagraphs = imagineContent.querySelectorAll('p');
+
+    imagineParagraphs.forEach((paragraph, i) => {
+        paragraph.style.animationDelay = `${i * 0.15}s`;
+        paragraph.style.webkitAnimationDelay = `${i * 0.15}s`;
+    });
 });
