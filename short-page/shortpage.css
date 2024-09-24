@@ -50,13 +50,15 @@ body {
 }
 
 .title1 {
-    color: #3b7fd7;
+    color: #FFF;
     border-radius: 100px;
-    background-color: #FFF;
+    background-color: #3b7fd7;
     padding: 4px 28px;
     margin: 8px;
     display: inline-block;
     font-size: 40px;
+    animation: ctaButton 1s alternate infinite;
+    -webkit-animation: ctaButton 1s alternate infinite;
 }
 
 .content {
@@ -194,12 +196,15 @@ button.submit-button {
     margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 35px;
-    background-color: #FFF;
-    background-image: linear-gradient(45deg, #8ddcff, transparent);
+    background-color: #E91E63;
+    /* background-color: #FFF; */
+    background-image: linear-gradient(45deg, #FF5722, transparent);
+    /* background-image: linear-gradient(45deg, #8ddcff, transparent); */
     border: none;
     font-weight: bold;
-    box-shadow: 0 0 20px #9de1ff;
-    color: #03A9F4;
+    box-shadow: 0 0 20px #E91E63;
+    /* box-shadow: 0 0 20px #9de1ff; */
+    color: #FFF;
     /* text-shadow: 0 2px  2px#0002; */
 }
 
@@ -216,6 +221,8 @@ button.cta {
     color: #FFF;
     text-shadow: 0 2px 2px #0002;
     cursor: pointer;
+    animation: ctaButton 1s alternate infinite;
+    -webkit-animation: ctaButton 1s alternate infinite;
 }
 
 @media (max-width: 767px) {
@@ -242,5 +249,14 @@ button.cta {
 
     .title1 {
         font-size: 30px;
+    }
+}
+
+@keyframes ctaButton {
+    from {
+        scale: 1.05;
+    }
+    to {
+        scale: 1;
     }
 }
