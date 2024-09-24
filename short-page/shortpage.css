@@ -111,7 +111,7 @@ body {
 }
 
 .imagine-content p:nth-child(2n) {
-    color: #0d3453;
+    color: #34f4ff;
 }
 
 .register-form {
@@ -219,7 +219,7 @@ button.cta {
     background-image: linear-gradient(45deg, #FF5722, transparent);
     border: none;
     font-weight: bold;
-    box-shadow: 0 0 20px #E91E63;
+    box-shadow: 0 0 10px #E91E63AA;
     color: #FFF;
     text-shadow: 0 2px 2px #0002;
     cursor: pointer;
