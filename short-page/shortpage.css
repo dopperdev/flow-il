@@ -5,8 +5,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Assistant", sans-serif;
+    text-align: center;
 }
 
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+}
 
 body {
     background-color: #0b1e3d;
@@ -20,6 +27,7 @@ body {
     right: 0;
     margin: 0 auto;
     text-align: center;
+    background-color: #ffe7c4;
 }
 
 .logo {
@@ -32,32 +40,133 @@ body {
     background-color: #FFF;
 }
 
-.header svg {
+.divider {
     fill: #FFF;
+}
+
+.divider svg {
     width: 100%;
     height: 50px;
 }
 
-.container {
-    padding: 50px;
+.title1 {
+    color: #3b7fd7;
+    border-radius: 100px;
+    background-color: #FFF;
+    padding: 4px 28px;
+    margin: 8px;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.content {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFF;
+    background-image: linear-gradient(0deg, #8fcdff, #d0e8f2);
+    color: #148ae8;
+}
+
+.middle-content {
+    color: #FFF;
     text-align: center;
     background: linear-gradient(0deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
     background-position: center center, 50% 0;
     flex-direction: row;
     border-radius: 50px;
-    width: 80%;
+    width: 100%;
+    max-width: 994px;
+    margin: 40px auto;
+    min-height: 500px;
+
+}
+
+.imagine-content {
+    background-image: linear-gradient(180deg, #00bfff, #0061ffAA);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 30px;
+    color: #d1e7ff;
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 2px solid #4b72d4;
+    box-shadow: 0 15px 15px -10px #3a47b7;
+}
+
+.imagine-content p {
+    text-align: right;
+    padding: 10px 0px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.container .content {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
+.imagine-content p i {
+    margin-left: 10px;
+}
+
+.imagine-content p:nth-child(2n) {
+    color: #053f6d;
+}
+
+.register-form {
+    background-color: #03A9F4;
+    border-radius: 20px;
+    background-image: linear-gradient(0deg, #00bfff, #0061ffAA);
+    box-shadow: 0 0 20px #03bfff33;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px;
+    max-width: 994px;
+    color: #d1e7ff;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.register-form::before {
+    content: '';
+    border-radius: 15px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 4px dashed #FFF;
+    pointer-events: none;
+}
+
+body>h1,
+body>h2,
+body>h3,
+body>h4,
+body>h5,
+body>h6 {
+    color: #FFF;
+    margin: 20px;
+    text-shadow: 0 0 20px #FFFA
+}
+
+body>h2 {
+    color: #2196F3;
+    text-shadow: 0 0 20px #2196F3;
+}
+
+.middle-content h2 {
+    padding: 60px 0;
+    font-size: 35px;
+}
+
+.middle-content h2:not(:last-child) {
+    border-bottom: 2px solid #FFF4;
+}
+
+.splitter {
+    height: 1px;
+    background-color: #FFF2;
+    width: 50%;
+    margin: 0 auto;
 }
 
 input[type="text"] {
@@ -79,16 +188,59 @@ input[type="text"]::placeholder {
 }
 
 button.submit-button {
-    background-color: #FFF;
     width: 100%;
     padding: 10px;
     font-size: 30px;
-    margin: 8px 0;
-    border-radius: 10px;
-    background-color: #012b61;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 35px;
+    background-color: #FFF;
+    background-image: linear-gradient(45deg, #8ddcff, transparent);
     border: none;
     font-weight: bold;
-    box-shadow: 0 0 10px #012b61;
+    box-shadow: 0 0 20px #9de1ff;
+    color: #03A9F4;
+    /* text-shadow: 0 2px  2px#0002; */
+}
+
+button.cta {
+    padding: 15px 30px;
+    font-size: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: #E91E63;
+    background-image: linear-gradient(45deg, #FF5722, transparent);
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 0 20px #E91E63;
     color: #FFF;
-    text-shadow: 0 0;
+    text-shadow: 0 2px 2px #0002;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .register-form,
+    .middle-content {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .middle-content {
+        border-radius: 0 0 20px 20px;
+        margin-top: -50px;
+        background-size: auto 150%;
+    }
+
+    .middle-content h2 {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    button.cta {
+        font-size: 25px;
+    }
+
+    .title1 {
+        font-size: 30px;
+    }
 }
