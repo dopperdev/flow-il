@@ -7,12 +7,16 @@
     font-family: "Assistant", sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: #0b1e3d;
     scroll-behavior: smooth;
     /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
     background-image: linear-gradient(0deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
-    background-size: 100vh 100vh;
+    background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     max-width: 944px;
