@@ -11,11 +11,11 @@ body {
     background-color: #0b1e3d;
     scroll-behavior: smooth;
     /* background-image: linear-gradient(30deg, #0b1e3f,  #00bfff44); */
-    background-image: linear-gradient(45deg, #0061ff, #00bfffAA), url(../stairs.jpeg);
+    background-image: linear-gradient(0deg, #00bfff, #0061ffAA), url(../stairs.jpeg);
     background-size: 100vh 100vh;
     background-position: top;
     background-repeat: no-repeat;
-    max-width: 942px;
+    max-width: 944px;
     margin: 0 auto;
 }
 
@@ -82,7 +82,10 @@ button.submit-button {
     font-size: 30px;
     margin: 8px 0;
     border-radius: 10px;
-    background-color: #00ffea;
+    background-color: #012b61;
     border: none;
     font-weight: bold;
+    box-shadow: 0 0 10px #012b61;
+    color: #FFF;
+    text-shadow: 0 0;
 }
