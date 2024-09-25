@@ -141,6 +141,10 @@ body {
     pointer-events: none;
 }
 
+.register-form .title {
+    border-bottom: 2px dashed #FFF;
+}
+
 body>h1,
 body>h2,
 body>h3,
@@ -174,6 +178,7 @@ body>h2 {
 }
 
 input[type="text"] {
+    text-align: right;
     width: 100%;
     margin: 8px 0;
     padding: 10px;
@@ -225,6 +230,33 @@ button.cta {
     cursor: pointer;
     animation: ctaButton 1s alternate infinite;
     -webkit-animation: ctaButton 1s alternate infinite;
+}
+
+/* wavy line */
+.wave-container {
+    position: relative;
+}
+
+.wave-container svg {
+    width: 100%;
+}
+
+.wave-container svg path {
+    stroke-dasharray: 0 500;
+}
+
+.wave-container svg.active path {
+    animation: lineDash 1.2s forwards;
+    -webkit-animation: lineDash 1.2s forwards;
+}
+
+@keyframes lineDash {
+    0% {
+        stroke-dasharray: 0 500;
+    }
+    100% {
+        stroke-dasharray: 400 500;
+    }
 }
 
 @media (max-width: 767px) {

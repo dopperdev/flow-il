@@ -18,4 +18,14 @@ window.addEventListener('load', () => {
         paragraph.style.animationDelay = `${i * 0.15}s`;
         paragraph.style.webkitAnimationDelay = `${i * 0.15}s`;
     });
+
+    window.addEventListener('scroll', () => {
+        const waveContainer = document.querySelector('.wave-container');
+        const waveSvg = waveContainer.querySelector('svg');
+
+        if (waveContainer.offsetTop < window.scrollY + window.innerHeight)
+            waveSvg.classList.add('active');
+        else
+            waveSvg.classList.remove('active');
+    });
 });
