@@ -216,7 +216,7 @@ button.submit-button {
 }
 
 button.cta {
-    padding: 15px 30px;
+    padding: 8px 12px;
     font-size: 40px;
     margin-top: 40px;
     border-radius: 20px;
@@ -264,6 +264,14 @@ button.cta {
         padding: 10px;
     }
 
+    .content h1 {
+        font-size: 7vw;
+    }
+    
+    .content h2 {
+        font-size: 5vw;
+    }
+
     .register-form,
     .middle-content {
         padding: 20px;
@@ -282,7 +290,7 @@ button.cta {
     }
 
     button.cta {
-        font-size: 25px;
+        font-size: 7vw;
     }
 
     .title1 {
