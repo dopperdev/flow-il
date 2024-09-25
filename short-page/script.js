@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
         ctaButton.addEventListener('click', () => {
             window.scrollTo({
                 top: registerForm.offsetTop,
-                behavior:'smooth'
+                behavior: 'smooth'
             })
         });
     });
@@ -20,12 +20,14 @@ window.addEventListener('load', () => {
     });
 
     window.addEventListener('scroll', () => {
-        const waveContainer = document.querySelector('.wave-container');
-        const waveSvg = waveContainer.querySelector('svg');
+        const waveContainers = document.querySelectorAll('.wave-container');
 
-        if (waveContainer.offsetTop < window.scrollY + window.innerHeight)
-            waveSvg.classList.add('active');
-        else
-            waveSvg.classList.remove('active');
+        waveContainers.forEach(waveContainer => {
+            const waveSvg = waveContainer.querySelector('svg');
+            if (waveContainer.offsetTop < window.scrollY + window.innerHeight)
+                waveSvg.classList.add('active');
+            else
+                waveSvg.classList.remove('active');
+        });
     });
 });
